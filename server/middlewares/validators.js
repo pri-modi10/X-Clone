@@ -11,9 +11,9 @@ exports.registerValidation = [
   isNotEmpty('email').isEmail().withMessage('Email must be valid.'),
   isNotEmpty('password')
     .isLength({ min: 6 }).withMessage('Password must be at least 6 characters.')
-    .matches(/[!@#$%^&*(),.?":{}|<>]/).withMessage('Must include a special character.')
-    .matches(/[A-Z]/).withMessage('Must include at least one uppercase letter.')
-    .matches(/[a-zA-Z0-9]/).withMessage('Must be alphanumeric.'),
+    .matches(/[!@#$%^&*(),.?":{}|<>]/).withMessage('Password must include a special character.')
+    .matches(/[A-Z]/).withMessage('Password must include at least one uppercase letter.')
+    .matches(/[a-zA-Z0-9]/).withMessage('Password must be alphanumeric.'),
 ];
 
 exports.loginValidation = [
